@@ -98,7 +98,7 @@ COMMENTAIRE     "//"({LETTRE}|{CHIFFRE})*
                 RETURN(TOK_IDENT);
 }
 
-{ENTIER} {
+{CHIFFRE} {
                 #if !LEX_DEBUG
                 /* A completer : affecter yylval.intval et faire des verifications */
                 yylval.strval = atoi(yytext);
